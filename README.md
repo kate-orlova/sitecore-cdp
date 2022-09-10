@@ -1,2 +1,4 @@
-# sitecore-cdp
-Sitecore CDP
+# Sitecore CDP
+Sitecore Customer Data Platform (CDP)
+
+TBC
