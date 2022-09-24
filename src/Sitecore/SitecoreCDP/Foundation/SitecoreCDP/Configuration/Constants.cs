@@ -6,5 +6,6 @@
         public const string StreamAPITarget = "CDP.StreamAPITarget";
         public const string CookieDomain = "CDP.CookieDomain";
         public const string POS = "CDP.POS";
+        public const string WebFlowTarget = "CDP.WebFlowTarget";
     }
 }
