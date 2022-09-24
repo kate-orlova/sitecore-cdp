@@ -2,7 +2,7 @@
 {
     public static class Constants
     {
-        public const string ClientKey = "ClientKey";
-        public const string StreamAPITarget = "StreamAPITarget";
+        public const string ClientKey = "CDP.ClientKey";
+        public const string StreamAPITarget = "CDP.StreamAPITarget";
     }
 }
