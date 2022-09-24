@@ -7,6 +7,9 @@
         public static string CookieDomain => GetSetting(Constants.CookieDomain);
         public static string POS => GetSetting(Constants.POS);
         public static string WebFlowTarget => GetSetting(Constants.WebFlowTarget);
+        public static string Channel => GetSetting(Constants.Channel);
+        public static string Type => GetSetting(Constants.Type);
+        public static string Currency => GetSetting(Constants.Currency);
         public static string GetSetting(string settingName, string defaultValue = null)
         {
             var settingValue = Sitecore.Configuration.Settings.GetSetting(settingName);
