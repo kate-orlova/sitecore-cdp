@@ -1,0 +1,23 @@
+@using Foundation.SitecoreCDP.Configuration
+
+<script>
+    _boxeverq.push(() => {
+        // Create a "VIEW" event object
+        const viewEvent = {
+            browser_id: Boxever.getID(),
+            channel: "@ConfigSettings.Channel",
+            type: "@ConfigSettings.Type",
+            language: "@Sitecore.Context.Item.Language.Name",
+            currency: "@ConfigSettings.Currency",
+            page: "@Sitecore.Links.LinkManager.GetItemUrl(Sitecore.Context.Item)",
+            pos: "@ConfigSettings.POS",
+        };
+
+        // Send the event data to the server
+        Boxever.eventCreate(
+            viewEvent,
+            () => { },
+            "json"
+        );
+    });
+</script>

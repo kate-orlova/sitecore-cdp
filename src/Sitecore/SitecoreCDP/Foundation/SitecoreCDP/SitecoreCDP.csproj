@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\SitecoreCDP.config" />
+    <Content Include="Views\CDP\sitecore-cdp-library.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Views\CDP\create-view-event.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
