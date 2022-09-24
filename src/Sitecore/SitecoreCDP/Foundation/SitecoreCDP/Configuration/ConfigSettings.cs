@@ -3,6 +3,7 @@
     public static class ConfigSettings
     {
         public static string ClientKey => GetSetting(Constants.ClientKey);
+        public static string StreamAPITarget => GetSetting(Constants.StreamAPITarget);
         public static string GetSetting(string settingName, string defaultValue = null)
         {
             var settingValue = Sitecore.Configuration.Settings.GetSetting(settingName);
