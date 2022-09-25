@@ -33,7 +33,21 @@ By default the browser ID is the main Event ID and `Boxever.getID()` function is
 
 *More events are coming soon!*
 
+## How to load the Boxever JavaScript Library on a non-Sitecore website and track events in Sitecore CDP?
+Follow the simple steps below to integrate your non-Sitecore website with Sitecore CDP & Personalise to support your marketing strategy.
+1. Create a new JavaScript file based on the code example provided in `..\src\scripts\sitecore-cdp-library.js` and replace the placeholder values with the required details from your Sitecore CDP & Personalize instance, [this guidance](https://doc.sitecore.com/cdp/en/developers/sitecore-customer-data-platform--data-model-2-1/walkthrough--preparing-to-integrate-with-sitecore-cdp.html#UUID-a3dfedd9-f5ae-2ea4-71b5-ad8a2c716599_UUID-7e431314-9371-8d40-8d0e-38b2e6ae25cd) explains where to collect the necessary information about your Sitecore CDP setup; 
 
+ 2. Import the created `sitecore-cdp-library.js` JavaScript file as the first `<script>` element before the closing _<&sol;body>_ tag as follows in your page template:
+```
+ <script src="scripts/sitecore-cdp-library.js"></script>
+ ```
+3. Create a new JavaScript file based on the code example provided in `..\src\scripts\sitecore-cdp-create-a-view-event.js` and replace the placeholder values with specific data you would like to track on the View event in Sitecore CDP;
+
+ 4. Import the created `sitecore-cdp-create-a-view-event.js` JavaScript file in your website page template right after the Boxever JavaScript Library initialisation script:
+```
+ <script src="scripts/sitecore-cdp-create-a-view-event.js"></script>
+ ```
+ 5. All is ready now and you can start browsing the captured events in Sitecore CDP. Note, that you should use the browser ID to find your VIEW events in the Sitecore CDP & Personalize application.
 
 
 
