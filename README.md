@@ -17,5 +17,8 @@ TBC
 
 TBC
 
+# Contribution
+Hope you found this module useful, your contributions and suggestions will be very much appreciated. Please submit a pull request.
+
 # License
 The Sitecore CDP module is released under the MIT license implying that you can modify and use it how you want even for commercial projects. Please give it a star if you like it and your experience was positive.
