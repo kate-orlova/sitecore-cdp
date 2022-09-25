@@ -5,17 +5,18 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/kate-orlova/sitecore-cdp)
 
 # Sitecore CDP
-Sitecore Customer Data Platform (CDP)
+Sitecore CDP module aims to support your marketing strategy and accelerate integration with the Sitecore Customer Data Platform (CDP). The module ships a bunch of handy CMS-agnostic scripts that can be easily incorporated into your Sitecore website or even a non-Sitecore project. 
 
-## How to load the Boxever JavaScript Library on a non-Sitecore website?
+## How to load the Boxever JavaScript Library on a Sitecore website and track events in Sitecore CDP
+TBC
+
+## How to load the Boxever JavaScript Library on a non-Sitecore website and track events in Sitecore CDP
 1. Create a new JavaScript file based on the code example provided in `scripts/sitecore-cdp-library.js`;
 1. Replace the placeholder values with the required details from your Sitecore CDP instance, [this guidance](https://doc.sitecore.com/cdp/en/developers/sitecore-customer-data-platform--data-model-2-1/walkthrough--preparing-to-integrate-with-sitecore-cdp.html#UUID-a3dfedd9-f5ae-2ea4-71b5-ad8a2c716599_UUID-7e431314-9371-8d40-8d0e-38b2e6ae25cd) explains where to collect the necessary information about your Sitecore CDP setup; 
 
 TBC
 
-## How to load the Boxever JavaScript Library on a Sitecore website?
 
-TBC
 
 # Contribution
 Hope you found this module useful, your contributions and suggestions will be very much appreciated. Please submit a pull request.
