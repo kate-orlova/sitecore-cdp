@@ -4,17 +4,36 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/kate-orlova/sitecore-cdp)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/kate-orlova/sitecore-cdp)
 
-# Sitecore CDP
-Sitecore CDP module aims to support your marketing strategy and accelerate integration with the Sitecore Customer Data Platform (CDP). The module ships a bunch of handy CMS-agnostic scripts that can be easily incorporated into your Sitecore website or even a non-Sitecore project. 
+# Sitecore CDP & Personalize
+Sitecore CDP & Personalize module aims to support your marketing strategy and accelerate integration with the Sitecore Customer Data Platform (CDP). The module ships a bunch of handy CMS-agnostic scripts that can be easily incorporated into your Sitecore website regardless of its version or even a non-Sitecore project. 
 
-## How to load the Boxever JavaScript Library on a Sitecore website and track events in Sitecore CDP
-TBC
+# Pre-requisites
+At first you need to provision your Sitecore CDP & Personalize instance and create at least one Point of Sale (see [here](https://doc.sitecore.com/cdp/en/developers/sitecore-customer-data-platform--data-model-2-0/walkthrough--preparing-to-integrate-with-sitecore-cdp.html#add-a-point-of-sale)). Once all preps are done you can start integrating your website with Sitecore CDP. 
 
-## How to load the Boxever JavaScript Library on a non-Sitecore website and track events in Sitecore CDP
-1. Create a new JavaScript file based on the code example provided in `scripts/sitecore-cdp-library.js`;
-1. Replace the placeholder values with the required details from your Sitecore CDP instance, [this guidance](https://doc.sitecore.com/cdp/en/developers/sitecore-customer-data-platform--data-model-2-1/walkthrough--preparing-to-integrate-with-sitecore-cdp.html#UUID-a3dfedd9-f5ae-2ea4-71b5-ad8a2c716599_UUID-7e431314-9371-8d40-8d0e-38b2e6ae25cd) explains where to collect the necessary information about your Sitecore CDP setup; 
+# Integration with Sitecore CDP
+The below technique will work with any version of Sitecore XM or XP implementation that follows the MVC development approach.
 
-TBC
+## How to load the Boxever JavaScript Library on a Sitecore website and track events in Sitecore CDP?
+### Load Sitecore CDP library
+Assume that your Sitecore CDP & Personalize instance has been successfully provisioned and at least one Point of Sale has been created. If so then the next step is to load the Boxever JavaScript Library on your Sitecore website. The **sitecore-cdp-library** _View Rendering_ (the file path is `..\src\Sitecore\SitecoreCDP\Foundation\SitecoreCDP\Views\CDP\sitecore-cdp-library.cshtml`) defines the core Boxever settings and imports the Boxever JavaScript Library. Ideally, you want to activate the Boxever JavaScript Library on all your webpages, therefore, you can incorporate this _View_ into the concerned _Layouts_ by adding the following code line as the first _<script>_ element before the closing _<&sol;body>_ tag to not slow down the overall website user experience:
+
+```
+@Html.Partial("~/Views/CDP/sitecore-cdp-library.cshtml")
+```
+
+For ease, the Boxever initialisation parameters along with some Sitecore CDP event attributes are defined as configuration settings in `..\src\Sitecore\SitecoreCDP\Foundation\SitecoreCDP\App_Config\Include\SitecoreCDP.config`. Please replace the placeholder values with the required details from your Sitecore CDP & Personalize instance, [this guidance](https://doc.sitecore.com/cdp/en/developers/sitecore-customer-data-platform--data-model-2-1/walkthrough--preparing-to-integrate-with-sitecore-cdp.html#UUID-a3dfedd9-f5ae-2ea4-71b5-ad8a2c716599_UUID-7e431314-9371-8d40-8d0e-38b2e6ae25cd) explains where to collect the necessary information about your Sitecore CDP & Personalize setup.
+
+### Track events in Sitecore CDP
+After you have successfully activated the Boxever JavaScript Library, you can start sending data to Sitecore CDP. The **create-view-event** _View Rendering_ (the file path is `..\src\Sitecore\SitecoreCDP\Foundation\SitecoreCDP\Views\CDP\create-view-event.cshtml`) creates a **VIEW event** object and sends the event data to Sitecore CDP dynamically pulling the _language_ and _page URL_ from the `Sitecore.Context.Item`. Following the common event-triggering nature, the VIEW event triggers every time your webpage loads, so it makes sence to place this view at a _Layout_ level too, for example, add the below code line to your _Layouts_ before the closing _<&sol;body>_ tag right after the Boxever JavaScript Library initialisation and import:
+
+ ```
+ @Html.Partial("~/Views/CDP/create-view-event.cshtml")
+ ```
+By default the browser ID is the main Event ID and `Boxever.getID()` function is being used to set the current browser ID to the _VIEW event_ object, so you should use the browser ID to find your VIEW events in the Sitecore CDP & Personalize application.
+
+*More events are coming soon!*
+
+
 
 
 
@@ -22,4 +41,4 @@ TBC
 Hope you found this module useful, your contributions and suggestions will be very much appreciated. Please submit a pull request.
 
 # License
-The Sitecore CDP module is released under the MIT license implying that you can modify and use it how you want even for commercial projects. Please give it a star if you like it and your experience was positive.
+The Sitecore CDP & Personalize module is released under the MIT license implying that you can modify and use it how you want even for commercial projects. Please give it a star if you like it and your experience was positive.
