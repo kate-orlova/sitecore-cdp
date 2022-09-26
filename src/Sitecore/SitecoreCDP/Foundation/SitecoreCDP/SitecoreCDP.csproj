@@ -68,8 +68,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\roslyn\csi.rsp" />
     <None Include="packages.config" />
     <Content Include="Views\CDP\create-view-event.cshtml" />
+    <Content Include="Views\CDP\create-identity-event.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

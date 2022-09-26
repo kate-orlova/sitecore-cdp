@@ -1,0 +1,28 @@
+@using Foundation.SitecoreCDP.Configuration
+
+<script>
+    _boxeverq.push(() => {
+        // Create an "IDENTITY" event object
+        const identityEvent = {
+
+            browser_id: Boxever.getID(),
+            channel: "@ConfigSettings.Channel",
+            type: "IDENTITY",
+            language: "@Sitecore.Context.Item.Language.Name",
+            currency: "@ConfigSettings.Currency",
+            page: "@Sitecore.Links.LinkManager.GetItemUrl(Sitecore.Context.Item)",
+            pos: "@ConfigSettings.POS",
+            "identifiers": [{
+                "provider": "Auth0",
+                "id": "auth0|xxx-yyy-zzz"
+            }]
+        };
+
+        // Send the event data to the server
+        Boxever.eventCreate(
+            identityEvent,
+            () => { },
+            "json"
+        );
+    });
+</script>
