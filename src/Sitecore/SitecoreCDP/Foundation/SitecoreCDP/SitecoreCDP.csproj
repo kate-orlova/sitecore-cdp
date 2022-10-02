@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Configuration\ConfigSettings.cs" />
     <Compile Include="Configuration\Constants.cs" />
+    <Compile Include="Enums\EventType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
