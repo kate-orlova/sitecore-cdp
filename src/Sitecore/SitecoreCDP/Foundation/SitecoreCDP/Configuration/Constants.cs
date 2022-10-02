@@ -8,7 +8,8 @@
         public const string POS = "CDP.POS";
         public const string WebFlowTarget = "CDP.WebFlowTarget";
         public const string Channel = "CDP.Channel";
-        public const string Type = "CDP.Type";
+        public const string TypeVisit = "CDP.Type.Visit";
+        public const string TypeIdentity = "CDP.Type.Identity";
         public const string Currency = "CDP.Currency";
     }
 }
