@@ -1,4 +1,9 @@
 @using Foundation.SitecoreCDP.Configuration
+@{
+    var user = Sitecore.Context.User;
+    var userId = user.GetProviderUserKey() ?? user.LocalName;
+    var email = !string.IsNullOrEmpty(user.Profile.Email) ? user.Profile.Email : "No email";
+}
 
 <script>
     _boxeverq.push(() => {
@@ -14,10 +19,9 @@
             pos: "@ConfigSettings.POS",
             "identifiers": [{
                 "provider": "Sitecore",
-                "id": "@Sitecore.Context.User.GetProviderUserKey()",
-                "firstname": "@Sitecore.Context.User.LocalName",
-                "fullname": "@Sitecore.Context.User.Profile.FullName",
-				"email": "@Sitecore.Context.User.Profile.Email"
+                "id": "@userId",
+				"fullname": "@user.Profile.FullName",
+				"email": "@email"
             }]
         };
 
