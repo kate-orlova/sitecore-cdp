@@ -15,7 +15,9 @@
             "identifiers": [{
                 "provider": "Sitecore",
                 "id": "@Sitecore.Context.User.GetProviderUserKey()",
-				"firstname": "@Sitecore.Context.User.Name"
+                "firstname": "@Sitecore.Context.User.LocalName",
+                "fullname": "@Sitecore.Context.User.Profile.FullName",
+				"email": "@Sitecore.Context.User.Profile.Email"
             }]
         };
 
