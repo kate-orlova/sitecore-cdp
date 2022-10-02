@@ -13,8 +13,9 @@
             page: "@Sitecore.Links.LinkManager.GetItemUrl(Sitecore.Context.Item)",
             pos: "@ConfigSettings.POS",
             "identifiers": [{
-                "provider": "Auth0",
-                "id": "auth0|xxx-yyy-zzz"
+                "provider": "Sitecore",
+                "id": "@Sitecore.Context.User.GetProviderUserKey()",
+				"firstname": "@Sitecore.Context.User.Name"
             }]
         };
 
