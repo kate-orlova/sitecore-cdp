@@ -49,7 +49,8 @@ Follow the simple steps below to integrate your non-Sitecore website with Siteco
  ```
  5. All is ready now and you can start browsing the captured events in Sitecore CDP. Note, that you should use the browser ID to find your VIEW events in the Sitecore CDP & Personalize application.
 
-
+# Sitecore CDP Tips
+To find users of your application by the browser ID in the Sitecore CDP application always use the ```bid:``` prefix plus the `browser ID` value, for example: ```bid: 335c8d8a-bcba-4d14-afad-fae252e5dd80```
 
 # Contribution
 Hope you found this module useful, your contributions and suggestions will be very much appreciated. Please submit a pull request.
