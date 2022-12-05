@@ -12,16 +12,17 @@
 
             browser_id: Boxever.getID(),
             channel: "@ConfigSettings.Channel",
-            type: "@ConfigSettings.TypeIdentity",
+            type: "@Foundation.SitecoreCDP.Enums.EventType.IDENTITY",
             language: "@Sitecore.Context.Item.Language.Name",
             currency: "@ConfigSettings.Currency",
             page: "@Sitecore.Links.LinkManager.GetItemUrl(Sitecore.Context.Item)",
             pos: "@ConfigSettings.POS",
+            email: "@email",
+            firstname: "@user.Profile.Name",
+			lastname: "USER_LASTNAME",
             "identifiers": [{
                 "provider": "Sitecore",
-                "id": "@userId",
-				"fullname": "@user.Profile.FullName",
-				"email": "@email"
+                "id": "@userId"
             }]
         };
 
