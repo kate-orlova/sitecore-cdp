@@ -31,6 +31,9 @@ After you have successfully activated the Boxever JavaScript Library, you can st
  ```
 By default the browser ID is the main Event ID and `Boxever.getID()` function is being used to set the current browser ID to the _VIEW event_ object, so you should use the browser ID to find your VIEW events in the Sitecore CDP & Personalize application.
 
+#### IDENTITY event
+TBC
+
 *More events are coming soon!*
 
 ## How to load the Boxever JavaScript Library on a non-Sitecore website and track events in Sitecore CDP?
