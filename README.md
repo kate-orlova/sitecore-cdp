@@ -36,6 +36,12 @@ TBC
 
 *More events are coming soon!*
 
+### Sitecore Packages
+Sitecore packages contain:
+
+1. Layouts
+Project -> Base Layout
+
 ## How to load the Boxever JavaScript Library on a non-Sitecore website and track events in Sitecore CDP?
 Follow the simple steps below to integrate your non-Sitecore website with Sitecore CDP & Personalise to support your marketing strategy.
 1. Create a new JavaScript file based on the code example provided in `..\src\scripts\sitecore-cdp-library.js` and replace the placeholder values with the required details from your Sitecore CDP & Personalize instance, [this guidance](https://doc.sitecore.com/cdp/en/developers/sitecore-customer-data-platform--data-model-2-1/walkthrough--preparing-to-integrate-with-sitecore-cdp.html#UUID-a3dfedd9-f5ae-2ea4-71b5-ad8a2c716599_UUID-7e431314-9371-8d40-8d0e-38b2e6ae25cd) explains where to collect the necessary information about your Sitecore CDP setup; 
