@@ -1,0 +1,30 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+@using Sitecore.Mvc.Presentation
+
+@model Sitecore.Mvc.Presentation.RenderingModel
+
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!--<![endif]-->
+<head>
+	<title>@Sitecore.Context.Item.DisplayName</title>
+	<link href="/default.css" rel="stylesheet" />
+	@Html.Sitecore().VisitorIdentification() 
+</head>
+<body>
+	
+	@Html.Partial("~/Views/CDP/sitecore-cdp-library.cshtml")
+
+    @Html.Sitecore().Placeholder("Header")
+    @Html.Sitecore().Placeholder("Main")
+    @Html.Sitecore().Placeholder("Footer")
+	
+	@Html.Partial("~/Views/CDP/create-view-event.cshtml")        
+	
+  </body>
+</html>
+</body>
+</html>
