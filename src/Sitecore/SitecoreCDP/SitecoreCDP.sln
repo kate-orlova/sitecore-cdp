@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{E897
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreCDP", "Foundation\SitecoreCDP\SitecoreCDP.csproj", "{6D1E2D3F-4B80-4021-89AB-37BEA9DD7CA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullStackExperience", "Feature\FullStackExperience\FullStackExperience.csproj", "{62CF418C-EAC9-40E3-9253-A022D8DD6A21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,12 +23,17 @@ Global
 		{6D1E2D3F-4B80-4021-89AB-37BEA9DD7CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D1E2D3F-4B80-4021-89AB-37BEA9DD7CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D1E2D3F-4B80-4021-89AB-37BEA9DD7CA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62CF418C-EAC9-40E3-9253-A022D8DD6A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62CF418C-EAC9-40E3-9253-A022D8DD6A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62CF418C-EAC9-40E3-9253-A022D8DD6A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62CF418C-EAC9-40E3-9253-A022D8DD6A21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6D1E2D3F-4B80-4021-89AB-37BEA9DD7CA6} = {891051A8-A308-4A84-BF44-7E631007EDC4}
+		{62CF418C-EAC9-40E3-9253-A022D8DD6A21} = {700B3720-A5DD-4441-9A9C-E62382FB0C09}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BEBABE04-4972-4992-9371-1033CBDC3496}
