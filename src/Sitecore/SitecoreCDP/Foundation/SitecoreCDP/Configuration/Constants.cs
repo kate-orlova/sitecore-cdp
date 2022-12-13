@@ -11,5 +11,6 @@
         public const string TypeVisit = "CDP.Type.Visit";
         public const string TypeIdentity = "CDP.Type.Identity";
         public const string Currency = "CDP.Currency";
+        public const string ExperienceId = "CDP.ExperienceId";
     }
 }

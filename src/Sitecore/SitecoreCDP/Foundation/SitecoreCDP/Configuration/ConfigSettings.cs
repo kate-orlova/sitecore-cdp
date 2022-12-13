@@ -11,6 +11,7 @@
         public static string TypeVisit => GetSetting(Constants.TypeVisit);
         public static string TypeIdentity => GetSetting(Constants.TypeIdentity);
         public static string Currency => GetSetting(Constants.Currency);
+        public static string ExperienceId => GetSetting(Constants.ExperienceId);
         public static string GetSetting(string settingName, string defaultValue = null)
         {
             var settingValue = Sitecore.Configuration.Settings.GetSetting(settingName);
