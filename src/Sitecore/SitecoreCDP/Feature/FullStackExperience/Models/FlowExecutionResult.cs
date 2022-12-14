@@ -12,6 +12,6 @@ namespace FullStackExperience.Models
         public string GuestName { get; set; }
 
         [JsonProperty("contentItemId")]
-        public Guid ContentItemId { get; set; }
+        public string ContentItemId { get; set; }
     }
 }
