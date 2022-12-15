@@ -1,14 +1,8 @@
-﻿using System.IO;
-using System.Net.Http;
-using System;
-using System.Threading.Tasks;
+﻿using System.Net.Http;
 using System.Web.Mvc;
 using Foundation.SitecoreCDP.Configuration;
 using FullStackExperience.Models;
 using FullStackExperience.Services;
-using Newtonsoft.Json;
-using System.Collections.Generic;
-using System.Web.UI.WebControls;
 
 namespace FullStackExperience.Controllers
 {
@@ -16,20 +10,14 @@ namespace FullStackExperience.Controllers
     {
         private readonly FlowExecutionService _flowExecutionService;
 
-        /*public BannerController(FlowExecutionService flowExecutionService)
+        public BannerController()
         {
-            _flowExecutionService = flowExecutionService;
-        }*/
+            _flowExecutionService = new FlowExecutionService(new HttpClient());
+        }
 
         public ActionResult Banner()
         {
-            var result = TestTask().GetAwaiter().GetResult();
 
-            return View("~/Views/FullStackExperience/Banner.cshtml", result);
-        }
-
-        public async Task<FlowExecutionResult> TestTask()
-        {
             var request = new FlowExecutionRequest()
             {
                 Channel = ConfigSettings.Channel,
@@ -41,21 +29,9 @@ namespace FullStackExperience.Controllers
                 PointOfSale = ConfigSettings.POS
             };
 
-            var httpClient = new HttpClient();
+            var result = _flowExecutionService.ExecuteFlow(request).GetAwaiter().GetResult();
 
-            //make the sync POST request
-            using (var httpRequest = new HttpRequestMessage(HttpMethod.Post, ConfigSettings.APIEndpoint + "callFlows"))
-            {
-                var json = JsonConvert.SerializeObject(request);
-                httpRequest.Content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
-
-                using (var response = await httpClient.SendAsync(httpRequest).ConfigureAwait(false))
-                {
-                    var content = await response.Content.ReadAsStringAsync();
-                    var result = JsonConvert.DeserializeObject<FlowExecutionResult>(content);
-                    return result;
-                }
-            }
+            return View("~/Views/FullStackExperience/Banner.cshtml", result);
         }
     }
 }

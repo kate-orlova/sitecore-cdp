@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Foundation.SitecoreCDP.Configuration;
 using FullStackExperience.Models;
+using Newtonsoft.Json;
 
 namespace FullStackExperience.Services
 {
@@ -16,21 +18,23 @@ namespace FullStackExperience.Services
 
         }
 
-        public FlowExecutionResult ExecuteFlow(FlowExecutionRequest request)
+        public async Task<FlowExecutionResult> ExecuteFlow(FlowExecutionRequest request)
         {
-            /*var httpResponse = _httpClient.PostAsJsonAsync("callFlows", request).Result;
-            httpResponse.EnsureSuccessStatusCode();
+            var httpClient = new HttpClient();
 
-            try
+            //make the sync POST request
+            using (var httpRequest = new HttpRequestMessage(HttpMethod.Post, ConfigSettings.APIEndpoint + "callFlows"))
             {
-                return httpResponse.Content.ReadAsAsync<FlowExecutionResult>().Result;
+                var json = JsonConvert.SerializeObject(request);
+                httpRequest.Content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+
+                using (var response = await httpClient.SendAsync(httpRequest).ConfigureAwait(false))
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    var result = JsonConvert.DeserializeObject<FlowExecutionResult>(content);
+                    return result;
+                }
             }
-            catch
-            {
-                //add logging
-            }*/
-
-            return null;
         }
     }
 }
