@@ -1,5 +1,4 @@
-﻿using System.Net.Http;
-using FullStackExperience.Services;
+﻿using FullStackExperience.Services;
 using Sitecore.DependencyInjection;
 using FullStackExperience.Controllers;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,8 +11,7 @@ namespace FullStackExperience.DependencyInjection
         {
             services.AddTransient(typeof(BannerController));
 
-            services.AddScoped<FlowExecutionService>();
-            services.AddScoped<HttpClient>();
+            services.AddHttpClient<FlowExecutionService>();
         }
     }
 }
