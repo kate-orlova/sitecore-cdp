@@ -1,3 +1,10 @@
-﻿@model string
+﻿@model FullStackExperience.Models.BannerModel
 
-@Model
+<div>
+    <h1>Hello @Model.GuestName</h1>
+
+    @if (Model.ContentItem != null)
+    {
+        <p>@Model.ContentItem.Paths.FullPath</p>
+    }
+</div>

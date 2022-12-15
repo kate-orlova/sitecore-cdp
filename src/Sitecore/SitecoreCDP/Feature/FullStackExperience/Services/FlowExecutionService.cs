@@ -21,7 +21,7 @@ namespace FullStackExperience.Services
         public async Task<FlowExecutionResult> ExecuteFlow(FlowExecutionRequest request)
         {
             //make the sync POST request
-            using (var httpRequest = new HttpRequestMessage(HttpMethod.Post, ConfigSettings.APIEndpoint + "callFlows"))
+            using (var httpRequest = new HttpRequestMessage(HttpMethod.Post, "callFlows"))
             {
                 var json = JsonConvert.SerializeObject(request);
                 httpRequest.Content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");

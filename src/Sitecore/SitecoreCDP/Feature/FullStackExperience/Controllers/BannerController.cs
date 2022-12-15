@@ -1,8 +1,8 @@
-﻿using System.Net.Http;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Foundation.SitecoreCDP.Configuration;
 using FullStackExperience.Models;
 using FullStackExperience.Services;
+using Sitecore.Data;
 
 namespace FullStackExperience.Controllers
 {
@@ -30,8 +30,18 @@ namespace FullStackExperience.Controllers
             };
 
             var result = _flowExecutionService.ExecuteFlow(request).GetAwaiter().GetResult();
+            var model = new BannerModel()
+            {
+                GuestEmail = result?.GuestEmail,
+                GuestName = result?.GuestName
+            };
 
-            return View("~/Views/FullStackExperience/Banner.cshtml", result);
+            if (result != null && ID.TryParse(result.ContentItemId, out var id))
+            {
+                model.ContentItem = Sitecore.Context.Database.GetItem(id);
+            }
+
+            return View("~/Views/FullStackExperience/Banner.cshtml", model);
         }
     }
 }
