@@ -10,9 +10,9 @@ namespace FullStackExperience.Controllers
     {
         private readonly FlowExecutionService _flowExecutionService;
 
-        public BannerController()
+        public BannerController(FlowExecutionService flowExecutionService)
         {
-            _flowExecutionService = new FlowExecutionService(new HttpClient());
+            _flowExecutionService = flowExecutionService;
         }
 
         public ActionResult Banner()
