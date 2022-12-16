@@ -5,6 +5,7 @@
 
     @if (Model.ContentItem != null)
     {
-        <p>@Model.ContentItem.Paths.FullPath</p>
+        <h3>@Model.ContentItem["Title"]</h3>
+        @Html.Raw(Model.ContentItem["Description"])
     }
 </div>
