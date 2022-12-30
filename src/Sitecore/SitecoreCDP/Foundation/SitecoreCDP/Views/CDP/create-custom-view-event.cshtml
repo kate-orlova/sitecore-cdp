@@ -2,7 +2,7 @@
 
 <script>
     _boxeverq.push(() => {
-        // Create a "VIEW" event object
+        // Create a custom "VIEW" event object
         const viewEvent = {
             browser_id: Boxever.getID(),
             channel: "@ConfigSettings.Channel",
@@ -10,7 +10,12 @@
             language: "@Sitecore.Context.Item.Language.Name",
             currency: "@ConfigSettings.Currency",
             page: "@Sitecore.Links.LinkManager.GetItemUrl(Sitecore.Context.Item)",
-            pos: "@ConfigSettings.POS"
+            pos: "@ConfigSettings.POS",
+            "additional info": {
+                "attribute 1": "X",
+                "attribute 2": "Y",
+                "attribute 3": "Z"
+            }
         };
 
         // Send the event data to the server
