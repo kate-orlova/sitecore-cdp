@@ -18,7 +18,7 @@ namespace FullStackExperience.Services
 
         }
 
-        public async Task<FlowExecutionResult> ExecuteFlow(FlowExecutionRequest request)
+        public async Task<T> ExecuteFlow<T>(FlowExecutionRequest request)
         {
             //make the sync POST request
             using (var httpRequest = new HttpRequestMessage(HttpMethod.Post, "callFlows"))
@@ -29,7 +29,7 @@ namespace FullStackExperience.Services
                 using (var response = await _httpClient.SendAsync(httpRequest).ConfigureAwait(false))
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    var result = JsonConvert.DeserializeObject<FlowExecutionResult>(content);
+                    var result = JsonConvert.DeserializeObject<T>(content);
                     return result;
                 }
             }

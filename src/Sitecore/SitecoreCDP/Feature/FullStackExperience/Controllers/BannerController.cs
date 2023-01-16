@@ -29,7 +29,7 @@ namespace FullStackExperience.Controllers
                 PointOfSale = ConfigSettings.POS
             };
 
-            var result = _flowExecutionService.ExecuteFlow(request).GetAwaiter().GetResult();
+            var result = _flowExecutionService.ExecuteFlow<FlowExecutionResult>(request).GetAwaiter().GetResult();
             var model = new BannerModel()
             {
                 GuestEmail = result?.GuestEmail,
