@@ -78,6 +78,8 @@
     <Compile Include="Controllers\BannerController.cs" />
     <Compile Include="DependencyInjection\ServicesConfigurator.cs" />
     <Compile Include="Models\BannerModel.cs" />
+    <Compile Include="Models\BannerOfferTemplate.cs" />
+    <Compile Include="Models\FlowExecutionOfferResult.cs" />
     <Compile Include="Models\FlowExecutionRequest.cs" />
     <Compile Include="Models\FlowExecutionResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
