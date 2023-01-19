@@ -12,6 +12,7 @@
         public const string TypeIdentity = "CDP.Type.Identity";
         public const string Currency = "CDP.Currency";
         public const string ExperienceId = "CDP.ExperienceId";
+        public const string OfferExperienceId = "CDP.OfferExperienceId";
         public const string APIEndpoint = "CDP.APIEndpoint";
     }
 }

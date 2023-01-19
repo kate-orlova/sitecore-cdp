@@ -12,6 +12,7 @@
         public static string TypeIdentity => GetSetting(Constants.TypeIdentity);
         public static string Currency => GetSetting(Constants.Currency);
         public static string ExperienceId => GetSetting(Constants.ExperienceId);
+        public static string OfferExperienceId => GetSetting(Constants.OfferExperienceId);
         public static string APIEndpoint => GetSetting(Constants.APIEndpoint);
         public static string GetSetting(string settingName, string defaultValue = null)
         {
