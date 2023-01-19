@@ -78,10 +78,10 @@
     <Compile Include="Controllers\BannerController.cs" />
     <Compile Include="DependencyInjection\ServicesConfigurator.cs" />
     <Compile Include="Models\BannerModel.cs" />
-    <Compile Include="Models\BannerOfferTemplate.cs" />
-    <Compile Include="Models\FlowExecutionOfferResult.cs" />
-    <Compile Include="Models\FlowExecutionRequest.cs" />
-    <Compile Include="Models\FlowExecutionResult.cs" />
+    <Compile Include="Models\Api\OfferTemplate.cs" />
+    <Compile Include="Models\Api\FlowExecutionOfferResult.cs" />
+    <Compile Include="Models\Api\FlowExecutionRequest.cs" />
+    <Compile Include="Models\Api\FlowExecutionResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\FlowExecutionService.cs" />
   </ItemGroup>

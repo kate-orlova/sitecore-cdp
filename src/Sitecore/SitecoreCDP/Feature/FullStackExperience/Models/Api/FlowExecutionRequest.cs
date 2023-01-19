@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace FullStackExperience.Models
+namespace FullStackExperience.Models.Api
 {
     public class FlowExecutionRequest
     {

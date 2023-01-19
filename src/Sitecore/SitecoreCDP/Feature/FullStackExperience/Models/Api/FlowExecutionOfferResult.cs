@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace FullStackExperience.Models
+namespace FullStackExperience.Models.Api
 {
     public class FlowExecutionOfferResult
     {
@@ -11,6 +11,6 @@ namespace FullStackExperience.Models
         public string GuestName { get; set; }
 
         [JsonProperty("offer")]
-        public BannerOfferTemplate Offer { get; set; }
+        public OfferTemplate Offer { get; set; }
     }
 }

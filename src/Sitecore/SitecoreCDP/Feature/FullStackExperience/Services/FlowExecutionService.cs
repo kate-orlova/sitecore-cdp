@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using Foundation.SitecoreCDP.Configuration;
-using FullStackExperience.Models;
+using FullStackExperience.Models.Api;
 using Newtonsoft.Json;
 
 namespace FullStackExperience.Services

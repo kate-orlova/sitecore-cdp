@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace FullStackExperience.Models
+namespace FullStackExperience.Models.Api
 {
-    public class BannerOfferTemplate
+    public class OfferTemplate
     {
         [JsonProperty("title")]
         public string Title { get; set; }
