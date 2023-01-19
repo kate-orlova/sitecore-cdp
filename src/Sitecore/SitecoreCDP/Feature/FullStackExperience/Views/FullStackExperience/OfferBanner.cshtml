@@ -1,0 +1,13 @@
+﻿@model FullStackExperience.Models.OfferBannerModel
+
+<div>
+    <p>You are logged in as @Model.GuestName (@Model.GuestEmail)</p>
+    
+    <h3>@Model.Title</h3>
+    <p>@Html.Raw(Model.Description)</p>
+    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+    {
+        <img src="@Model.ImageUrl" />
+    }
+
+</div>
