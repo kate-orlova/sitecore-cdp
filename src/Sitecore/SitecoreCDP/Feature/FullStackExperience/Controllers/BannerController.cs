@@ -24,7 +24,7 @@ namespace FullStackExperience.Controllers
                 Channel = ConfigSettings.Channel,
                 ClientKey = ConfigSettings.ClientKey,
                 CurrencyCode = ConfigSettings.Currency,
-                Email = Sitecore.Context.User.Profile?.Email,
+                BrowserId = HttpContext.Request.Cookies["bid_" + ConfigSettings.ClientKey]?.Value,
                 FriendlyId = ConfigSettings.ExperienceId,
                 Language = Sitecore.Context.Item.Language.Name,
                 PointOfSale = ConfigSettings.POS
@@ -52,7 +52,7 @@ namespace FullStackExperience.Controllers
                 Channel = ConfigSettings.Channel,
                 ClientKey = ConfigSettings.ClientKey,
                 CurrencyCode = ConfigSettings.Currency,
-                Email = Sitecore.Context.User.Profile?.Email,
+                BrowserId = HttpContext.Request.Cookies["bid_" + ConfigSettings.ClientKey]?.Value,
                 FriendlyId = ConfigSettings.OfferExperienceId,
                 Language = Sitecore.Context.Item.Language.Name,
                 PointOfSale = ConfigSettings.POS

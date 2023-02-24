@@ -24,5 +24,9 @@ namespace FullStackExperience.Models.Api
 
         [JsonProperty("friendlyId")]
         public string FriendlyId { get; set; }
-}
+
+        [JsonProperty("browserId")]
+        public string BrowserId { get; set; }
+
+    }
 }
