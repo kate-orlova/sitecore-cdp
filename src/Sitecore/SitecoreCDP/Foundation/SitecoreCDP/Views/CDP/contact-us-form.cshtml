@@ -1,0 +1,102 @@
+@using Foundation.SitecoreCDP.Configuration
+<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+<script>
+    function data_processing(e)
+	{
+	e.preventDefault();
+	
+	_boxeverq.push(() => {
+        // Create an "IDENTITY" event object
+        const identityEvent = {
+
+            browser_id: Boxever.getID(),
+            channel: "@ConfigSettings.Channel",
+			type: "@Foundation.SitecoreCDP.Enums.EventType.IDENTITY",
+            language: "@Sitecore.Context.Item.Language.Name",
+            currency: "@ConfigSettings.Currency",
+            page: "@Sitecore.Links.LinkManager.GetItemUrl(Sitecore.Context.Item)",
+            pos: "@ConfigSettings.POS",
+            email: document.getElementById("email").value,
+            firstname: document.getElementById("firstname").value,
+            lastname: document.getElementById("lastname").value,
+			identifiers: [{
+                "provider": "Sitecore",
+                "id": document.getElementById("email").value
+            }]
+        };
+        alert("Thank you for providing your details!");
+
+        // Send the event data to the server
+        Boxever.eventCreate(
+            identityEvent,
+            () => { },
+            "json"
+        );
+    
+	});
+	}
+		
+</script>
+
+<div class="form-block hide w-form">
+    <form novalidate="novalidate" id="contactForm" method="get" name="wf-form-Contact-Form" data-name="Contact Form" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;" data-w-id="8af91c83-bade-b437-97f6-dc92611331e4" id="wf-form-Contact-Form" class="message-form" aria-label="Contact Form">
+        <div class="control-wrapper">
+            <input type="text" class="text-field w-input" maxlength="256" name="firstname" data-name="FirstName" placeholder="First Name" id="firstname" required="">
+        </div>
+        <div class="control-wrapper">
+            <input type="text" class="text-field w-input" maxlength="256" name="lastname" data-name="LastName" placeholder="Last Name" id="lastname">
+        </div>
+        <div class="control-wrapper">
+            <input type="email" class="text-field w-input" maxlength="256" name="email" data-name="Email" placeholder="Your email" id="email" required="">
+        </div>
+        <label class="form-checkbox">
+            <input type="checkbox" id="marketing_comms" name="marketing_comms" data-name="marketing_comms">
+            <span for="checkbox-2">Sign up to receive marketing communications from UNRVLD. You can unsubscribe at any time.</span>
+        </label>
+        <input type="submit" value="Get in touch" pattern="" data-wait="Please wait..." class="button b-button">
+    </form>
+</div>
+
+<script>
+    const validator = new JustValidate('#contactForm',{
+    });
+    validator
+    .addField('#firstname', [
+        {
+        rule: 'required',
+        },
+        {
+        rule: 'minLength',
+        value: 1,
+        },
+        {
+        rule: 'maxLength',
+        value: 30,
+        },
+    ])
+    .addField('#lastname', [
+        {
+        rule: 'required',
+        },
+        {
+        rule: 'minLength',
+        value: 1,
+        },
+        {
+        rule: 'maxLength',
+        value: 30,
+        }
+    ])
+    .addField('#email', [
+        {
+        rule: 'required',
+        },
+        {
+        rule: 'email',
+        },
+    ]);
+    validator.onSuccess(() => {
+        data_processing(event);
+        document.getElementById("contactForm").reset(); 
+    })
+</script>
