@@ -39,8 +39,11 @@ TBC
 ### Sitecore Packages
 Sitecore packages contain:
 
-1. Layouts
+1. Base Layout
 Project -> Base Layout
+1. Renderings
+1. Templates
+1. Test items
 
 ## How to load the Boxever JavaScript Library on a non-Sitecore website and track events in Sitecore CDP?
 Follow the simple steps below to integrate your non-Sitecore website with Sitecore CDP & Personalise to support your marketing strategy.
