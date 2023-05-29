@@ -32,9 +32,14 @@ After you have successfully activated the Boxever JavaScript Library, you can st
 By default the browser ID is the main Event ID and `Boxever.getID()` function is being used to set the current browser ID to the _VIEW event_ object, so you should use the browser ID to find your VIEW events in the Sitecore CDP & Personalize application.
 
 #### IDENTITY event
-TBC
+For authenticated users you can trigger an **IDENTITY event** to pass some profile properties and identify anonymous guests in the Sitecore CDP, for example,
+ 
+```
+@if(user.IsAuthenticated){
+   @Html.Partial("~/Views/CDP/create-identity-event.cshtml");
+}
+```
 
-*More events are coming soon!*
 
 ### Sitecore Packages
 Sitecore packages contain:
