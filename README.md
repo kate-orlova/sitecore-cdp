@@ -64,11 +64,11 @@ Follow the simple steps below to integrate your non-Sitecore website with Siteco
 4. Build the API integration in C# language. 
 
  Watch this video to see how the above steps work in practice:
- <div align="left" width="450" height="350">
-      <a href="https://www.youtube.com/watch?v=vhB9aMvRvFA">
-         <img src="https://img.youtube.com/vi/vhB9aMvRvFA/0.jpg">
-      </a>
-</div>
+ 
+ <a href="http://www.youtube.com/watch?feature=player_embedded&v=vhB9aMvRvFA" target="_blank">
+ <img src="http://img.youtube.com/vi/vhB9aMvRvFA/mqdefault.jpg" alt="Watch the video" width="350" border="10" />
+</a>
+
  
 ## Sitecore Packages
 Sitecore packages contain:
