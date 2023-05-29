@@ -65,9 +65,7 @@ Follow the simple steps below to integrate your non-Sitecore website with Siteco
 
  Watch this video to see how the above steps work in practice:
  
- <a href="http://www.youtube.com/watch?feature=player_embedded&v=vhB9aMvRvFA" target="_blank">
- <img src="http://img.youtube.com/vi/vhB9aMvRvFA/mqdefault.jpg" alt="Watch the video" width="350" border="10" />
-</a>
+ <a href="http://www.youtube.com/watch?feature=player_embedded&v=vhB9aMvRvFA" target="_blank"><img src="http://img.youtube.com/vi/vhB9aMvRvFA/mqdefault.jpg" alt="Watch the video" width="350" border="10" /></a>
 
  
 ## Sitecore Packages
