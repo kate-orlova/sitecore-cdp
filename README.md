@@ -69,7 +69,7 @@ Follow the simple steps below to integrate your non-Sitecore website with Siteco
 
  
 ## Sitecore Packages
-Sitecore packages contain:
+Sitecore packages folder contain:
 
 1. Base Layout
 Project -> Base Layout
@@ -77,6 +77,10 @@ Project -> Base Layout
 1. Templates
 1. Test items
  
+ 
+## Personalize Packages
+Personalize packages folder contain the configuration scripts in FreeMarker and server-side JavaScript languages.
+
  
  # Sitecore CDP Tips
 To find users of your application by the browser ID in the Sitecore CDP application always use the ```bid:``` prefix plus the `browser ID` value, for example: ```bid: 335c8d8a-bcba-4d14-afad-fae252e5dd80```
