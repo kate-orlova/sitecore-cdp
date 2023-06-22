@@ -79,7 +79,11 @@ Project -> Base Layout
  
  
 ## Personalize Packages
-Personalize packages folder contain the configuration scripts in FreeMarker and server-side JavaScript languages.
+Personalize packages folder contain the configuration scripts in FreeMarker and server-side JavaScript languages:
+ - `API-Response-ContentItemId.ftl` - an example of Personalize API response with a Sitecore Item Id
+ - `API-Response-Offer.ftl` - an example of Personalize API response with Offers
+ - `Custom-Condition-Number-of-Events.js` - an example of a custom condition for a number of View events
+ - `getNumberOfEvents.js` - an example of how to calculate number of all VIEW events across all sessions
 
  
  # Sitecore CDP Tips
