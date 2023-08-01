@@ -48,13 +48,13 @@ Follow the simple steps below to integrate your non-Sitecore website with Siteco
 ```
  <script src="scripts/sitecore-engage-library.js"></script>
  ```
-3. Create a new JavaScript file based on the code example provided in `..\src\scripts\sitecore-cdp-create-a-view-event.js` and replace the placeholder values with specific data you would like to track on the View event in Sitecore CDP;
+3. Create a new JavaScript file based on the code example provided in `..\src\scripts\sitecore-engage-create-a-view-event.js` and replace the placeholder values with specific data you would like to track on the View event in Sitecore CDP;
 
- 4. Import the created `sitecore-cdp-create-a-view-event.js` JavaScript file in your website page template right after the Boxever JavaScript Library initialisation script:
+ 4. Import the created `sitecore-engage-create-a-view-event.js` JavaScript file in your website page template right after the Engage JavaScript Library initialisation script:
 ```
- <script src="scripts/sitecore-cdp-create-a-view-event.js"></script>
+ <script src="scripts/sitecore-engage-create-a-view-event.js"></script>
  ```
- 5. All is ready now and you can start browsing the captured events in Sitecore CDP. Note, that you should use the browser ID to find your VIEW events in the Sitecore CDP & Personalize application.
+ 5. All is ready now and you can start browsing the captured events in Sitecore CDP. Note, that you should use the Browser ID or Guest ID to find your VIEW events in the Sitecore CDP & Personalize application.
     
 
 # Full Stack Experience in the Sitecore Personalize
