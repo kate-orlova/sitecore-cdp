@@ -8,7 +8,7 @@
 Sitecore CDP & Personalize module aims to support your marketing strategy and accelerate integration with the Sitecore Customer Data Platform (CDP). The module ships a bunch of handy CMS-agnostic scripts that can be easily incorporated into your Sitecore website regardless of its version or even a non-Sitecore project. 
 
 # Pre-requisites
-At first you need to provision your Sitecore CDP & Personalize instance and create at least one Point of Sale (see [here](https://doc.sitecore.com/cdp/en/developers/sitecore-customer-data-platform--data-model-2-0/walkthrough--preparing-to-integrate-with-sitecore-cdp.html#add-a-point-of-sale)). Once all preps are done you can start integrating your website with Sitecore CDP. 
+At first you need to provision your Sitecore CDP & Personalize instance and create at least one Point of Sale (see [here](https://doc.sitecore.com/cdp/en/developers/api/index-en.html#UUID-dfb6f11e-0ca2-e23a-0f1d-0dfb42ab2968)). Once all preps are done you can start integrating your website with Sitecore CDP. 
 
 # Integration with Sitecore CDP
 The below technique will work with any version of Sitecore XM or XP implementation that follows the MVC development approach.
@@ -40,13 +40,13 @@ For authenticated users you can trigger an **IDENTITY event** to pass some profi
 }
 ```
 
-## How to load the Boxever JavaScript Library on a non-Sitecore website and track events in Sitecore CDP?
+## How to load the Engage JavaScript Library on a non-Sitecore website and track events in Sitecore CDP?
 Follow the simple steps below to integrate your non-Sitecore website with Sitecore CDP & Personalise to support your marketing strategy.
-1. Create a new JavaScript file based on the code example provided in `..\src\scripts\sitecore-cdp-library.js` and replace the placeholder values with the required details from your Sitecore CDP & Personalize instance, [this guidance](https://doc.sitecore.com/cdp/en/developers/sitecore-customer-data-platform--data-model-2-1/walkthrough--preparing-to-integrate-with-sitecore-cdp.html#UUID-a3dfedd9-f5ae-2ea4-71b5-ad8a2c716599_UUID-7e431314-9371-8d40-8d0e-38b2e6ae25cd) explains where to collect the necessary information about your Sitecore CDP setup; 
+1. Create a new JavaScript file based on the code example provided in `..\src\scripts\sitecore-engage-library.js` and replace the placeholder values with the required details from your Sitecore CDP & Personalize instance, [this guidance](https://doc.sitecore.com/cdp/en/developers/api/index-en.html#UUID-d5fdb6b2-5ee6-a577-600b-c4250c69e3e8) explains where to collect the necessary information about your Sitecore CDP setup; 
 
- 2. Import the created `sitecore-cdp-library.js` JavaScript file as the first `<script>` element before the closing _<&sol;body>_ tag as follows in your page template:
+ 2. Import the created `sitecore-engage-library.js` JavaScript file as the first `<script>` element before the closing _<&sol;body>_ tag as follows in your page template:
 ```
- <script src="scripts/sitecore-cdp-library.js"></script>
+ <script src="scripts/sitecore-engage-library.js"></script>
  ```
 3. Create a new JavaScript file based on the code example provided in `..\src\scripts\sitecore-cdp-create-a-view-event.js` and replace the placeholder values with specific data you would like to track on the View event in Sitecore CDP;
 
@@ -55,6 +55,7 @@ Follow the simple steps below to integrate your non-Sitecore website with Siteco
  <script src="scripts/sitecore-cdp-create-a-view-event.js"></script>
  ```
  5. All is ready now and you can start browsing the captured events in Sitecore CDP. Note, that you should use the browser ID to find your VIEW events in the Sitecore CDP & Personalize application.
+    
 
 # Full Stack Experience in the Sitecore Personalize
 ## How to connect the Sitecore-managed content to the Sitecore Personalize? 
