@@ -1,3 +1,5 @@
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/kate-orlova/sitecore-cdp)
+[![GitHub release](https://img.shields.io/github/release-date/kate-orlova/sitecore-cdp.svg?style=flat)](https://github.com/kate-orlova/sitecore-cdp/releases/tag/v1.2)
 [![GitHub license](https://img.shields.io/github/license/kate-orlova/sitecore-cdp.svg)](https://github.com/kate-orlova/sitecore-cdp/blob/master/LICENSE)
 ![GitHub language count](https://img.shields.io/github/languages/count/kate-orlova/sitecore-cdp.svg?style=flat)
 ![GitHub repo size](https://img.shields.io/github/repo-size/kate-orlova/sitecore-cdp.svg?style=flat)
